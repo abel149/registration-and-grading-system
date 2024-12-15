@@ -62,7 +62,7 @@
                             <a class="nav-bnt btn btn-light nav-link" href="#vision-about">ABOUT US</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-bnt btn btn-light nav-link" href="#bottom">CONTACT US</a>
+                            <a class="nav-bnt btn btn-light nav-link" href="#bottom">CONTACTUS</a>
                           </li>
                         <li class="nav-item">
                             <a class="nav-bnt btn btn-light nav-link log" href="login.php">Login<i class="fa-solid fa-user-plus"></i></a> 
