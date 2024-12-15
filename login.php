@@ -33,7 +33,7 @@
             <!-- Role Selection -->
             <div class="mb-3">
                 <label for="role" class="form-label">Who are you</label>
-                <select class="form-select" id="role" required>
+                <select class="form-select" name="selectrole" id="role" required>
                     <option value="administrator">Administrator</option>
                     <option value="student">Student</option>
                     <option value="teacher">Teacher</option>
@@ -44,18 +44,18 @@
             <!-- Username Field -->
             <div class="mb-3">
                 <label for="username" class="form-label">Username</label>
-                <input type="text" class="form-control" id="username" placeholder="Enter username" required>
+                <input type="text" name="username" class="form-control" id="username" placeholder="Enter username" required>
             </div>
 
             <!-- Password Field -->
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+                <input type="password" name="password" class="form-control" id="password" placeholder="Enter password" required>
             </div>
 
             <!-- Sign In Button -->
             <div class="d-grid gap-2">
-                <button type="submit" class="btn btn-light">Sign In</button>
+                <button type="submit" class="btn btn-light" name="signin">Sign In</button>
                 <a href="index.php" class="btn btn-light" >Back To Home</a>
             </div>
         </form>
