@@ -30,7 +30,6 @@
         <h2>Login</h2>
 
         <form>
-            <span name="loginvalid">  </span>
             <!-- Role Selection -->
             <div class="mb-3">
                 <label for="role" class="form-label">Who are you</label>
