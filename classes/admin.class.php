@@ -3,13 +3,14 @@ class Admin extends Dbh
 {
 
 
-    public function setTeacher($id, $fname, $lname, $code, $pass, $role)
+    public function setTeacher($id, $fname, $lname, $code, $pass)
     {
 
+        $hashedpwd = password_hash($pass, PASSWORD_DEFAULT);
 
         $sql = "insert into user (id,password,role) values (?,?,?)";
         $stm = $this->connect()->prepare($sql);
-        $stm->execute([$id, $pass, $role]);
+        $stm->execute([$id, $hashedpwd, 'teacher']);
 
         $sql = "insert into teachers (tid,corsecode) values (?,?)";
         $stm = $this->connect()->prepare($sql);
@@ -22,12 +23,17 @@ class Admin extends Dbh
         $stm = $this->connect()->prepare($sql);
         $stm->execute([$id, $fname, $lname]);
     }
-    public function setregistral($fname, $lname, $pass)
+    public function setregistral($fname, $lname, $pass, $id)
     {
+        $hashedpwd = password_hash($pass, PASSWORD_DEFAULT);
 
-        $sql = "insert into registraloffice (first_name,last_lame,password) values (?,?,?)";
+        $sql = "insert into user (id,password,role) values (?,?,?)";
         $stm = $this->connect()->prepare($sql);
-        $stm->execute([$fname, $lname, $pass]);
+        $stm->execute([$id, $hashedpwd, 'teacher']);
+
+        $sql = "insert into info (id,fname,lname) values (?,?,?)";
+        $stm = $this->connect()->prepare($sql);
+        $stm->execute([$id, $fname, $lname]);
     }
     public function getstudentstmt()
     {

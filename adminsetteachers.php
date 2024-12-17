@@ -15,7 +15,8 @@
             <input type="text" name="fname" placeholder="firstname"> <br />
             <input type="text" name="lname" placeholder="lastname"><br />
             <input type="text" name="course_code" placeholder="course"><br />
-            <input type="text" name="role" placeholder="role">
+            <input type="text" name="pass" placeholder="password"><br />
+
 
 
 
@@ -26,10 +27,14 @@
     </div>
     <br />
     <h2> registral oprators</h2>
-    <form action="ad.inc.php" method="POST">
-        <input type="text" name="rfname">
-        <input type="text" name="rlname">
-        <input type="submit" name="s">
+    <form action="includes/ad.inc.php" method="POST">
+        <input type="text" name="id" placeholder="username"><br />
+        <input type="text" name="rfname" placeholder="fname"><br />
+        <input type="text" name="rlname" placeholder="lname"><br />
+        <input type="password" name="pass" placeholder="password"><br />
+
+        <input type="submit" name="s"><br />
+
     </form>
 
 </body>

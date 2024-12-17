@@ -22,9 +22,9 @@ if (isset($_POST['submit'])) {
     } else if ($_SESSION['role'] == 'student') {
         header("location:../student.php?error=none");
     } else if ($_SESSION['role'] == 'teacher') {
-        header("location:../teacher.php?error=none");
+        header("location:../teachers.php?error=none");
     } else if ($_SESSION['role'] == 'registral') {
-        header("location:../registrar.php?error=none");
+        header("location:../registral.php?error=none");
     } else {
 
         header("location:../index.php?error=none");
