@@ -25,7 +25,7 @@ if (isset($_POST['sub'])) {
 
 
 
-    header("location:../adminsetteachers.php?error=none");
+    header("location:../adminTeachers.php?error=none");
 }
 //$register->getstudent($id);thid doesent work
 
@@ -52,5 +52,5 @@ if (isset($_POST['s'])) {
 
     $registeraloffice->setregistral($fname, $lname, $pass, $id, $role);
 
-    header("location:../adminsetteachers.php?error=none");
+    header("location:../adminTeachers.php?error=none");
 }
