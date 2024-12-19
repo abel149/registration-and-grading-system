@@ -28,12 +28,12 @@
     <body>
         <!-- Header Section -->
         <div class="header">
-            <h1>Admin Teachers Dashboard</h1>
+            <h1>Admin Registrar Dashboard</h1>
         </div>
         <div class="container">
         <div class="row g-5">
         <div class="form-container col-lg-3">
-                        <h3>Sign Up Teacher</h3>
+                        <h3>Sign Up Registrar</h3>
                         <form id="teacherForm" action="includes/ad.inc.php">
                             <div class="mb-3">
                                 <label for="id" class="form-label">ID</label>
@@ -48,8 +48,20 @@
                                 <input type="text" class="form-control" id="lname" name="lname" required>
                             </div>
                             <div class="mb-3">
-                                <label for="coursecode" class="form-label">Course Code</label>
-                                <input type="text" class="form-control" id="coursecode" name="coursecode" required>
+                                <label for="sec" class="form-label">Section</label>
+                                <input type="text" class="form-control" id="sec" name="sec" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="dep" class="form-label">Department</label>
+                                <input type="text" class="form-control" id="dep" name="dep" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="year" class="form-label">Year</label>
+                                <input type="text" class="form-control" id="year" name="year" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="semi" class="form-label">Semister</label>
+                                <input type="text" class="form-control" id="semi" name="semi" required>
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Password</label>
@@ -60,18 +72,21 @@
                         </form>
                     </div>
         <div class="table-container col-lg-6">
-                <h3 class="mt-4">Registered Teachers</h3>
+                <h3 class="mt-4">Registered Registrar</h3>
                 <table class="table table-striped table-bordered mt-3">
                     <thead>
                         <tr>
                             <th>ID</th>
                             <th>First Name</th>
                             <th>Last Name</th>
-                            <th>Course_Code</th>
+                            <th>Section</th>
+                            <th>Department</th>
+                            <th>Year</th>
+                            <th>Semister</th>
                             <th>Password</th>
                         </tr>
                     </thead>
-                    <tbody id="teacherTableBody">
+                    <tbody id="registrarTableBody">
                         <!-- Dynamic teacher data will appear here -->                      
                     </tbody>        
                 </table>
