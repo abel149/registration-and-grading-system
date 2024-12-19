@@ -93,7 +93,14 @@
                 <button type="submit" class="btn btn-success" name="del">Delete</button>
         </div> 
     </div>
-    </div>        
+        <br>
+            <div class="logout-button">
+                <a href="includes/logout.php" class="btn btn-success log">Logout</a>
+            </div>
+    </div> 
+    <footer>
+    <p>&copy; 2024 Registrar Portal | All Rights Reserved</p>
+  </footer>      
 </body>
 </html>
 
