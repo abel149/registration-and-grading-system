@@ -51,7 +51,7 @@
                             <input type="text" class="form-control" id="lname" name="lname" required>
                         </div>
                         <div class="mb-3">
-                            <label for="coursecode" class="form-label">Course Code</label>
+                            <label for="coursecode" class="form-label">coursecode</label>
                             <input type="text" class="form-control" id="coursecode" name="coursecode" required>
                         </div>
                         <div class="mb-3">
