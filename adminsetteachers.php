@@ -16,11 +16,7 @@
             <input type="text" name="lname" placeholder="lastname"><br />
             <input type="text" name="course_code" placeholder="course"><br />
             <input type="text" name="pass" placeholder="password"><br />
-
-
-
-
-            <br>
+<br>
             <button type="submit" name="sub">login</button>
         </form>
 

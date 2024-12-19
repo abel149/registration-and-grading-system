@@ -52,7 +52,7 @@ session_start();
         <h3 class="card-header">Teacher</h3>
         <div class="card-body">
           <p class="card-text">View and manage teacher information</p>
-          <a href="#" class="btn btn-success">View Teacher</a>
+          <a href="adminTeachers.php" class="btn btn-success">View Teacher</a>
         </div>
       </div>
 
