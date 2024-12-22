@@ -82,7 +82,7 @@ session_start();
         <h3 class="card-header">View Departments</h3>
         <div class="card-body">
           <p class="card-text">View and manage all departments in the institution</p>
-          <a href="#" class="btn btn-success">View Department</a>
+          <a href="department.php" class="btn btn-success">View Department</a>
         </div>
       </div>
 

@@ -34,6 +34,7 @@
             <h1>Admin Teachers Dashboard</h1>
         </div>
         <div class="container">
+
             <div class="row g-5">
                 <div class="form-container col-lg-3">
                     <h3>Sign Up Teacher</h3>
@@ -82,7 +83,3 @@
                     <button type="submit" class="btn btn-success">Delete</button>
                 </div>
             </div>
-        </div>
-    </body>
-
-</html>
