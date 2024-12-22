@@ -6,8 +6,8 @@ if (isset($_POST['sub'])) {
     $fname = $_POST['fname'];
     $lname = $_POST['lname'];
     $id = $_POST['id'];
-    $code = $_POST['course_code'];
-    $role = $_POST['role'];
+    $code = $_POST['coursecode'];
+
     $pass = $_POST['pass'];
 
     //instantiate signupcontr class
@@ -21,7 +21,7 @@ if (isset($_POST['sub'])) {
 
     //user signin 
     // $register->getstudentstmt();
-    $register->setTeacher($id, $fname, $lname, $code, $pass, $role);
+    $register->setTeacher($id, $fname, $lname, $code, $pass);
 
 
 
