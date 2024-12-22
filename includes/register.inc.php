@@ -28,5 +28,7 @@ if (isset($_POST['sub'])) {
 
 
     //redirect to the home page
-    header("location:../register.php?error=none");
+
+    header("location:adminRegistrar.php?error=none");
+
 }
