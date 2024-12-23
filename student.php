@@ -1,19 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+session_start();
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+if (isset($_SESSION['role'])) {
+?>
 
-  <!-- Bootstrap -->
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
 
 
-  <title>student</title>
+    <title>student</title>
 
-</head>
+  </head>
 
-<body>
-  <h1>students</h1>
-</body>
+  <body>
+    <h1>students</h1>
+  </body>
 
-</html>
+  </html>
+
+<?php } ?>
