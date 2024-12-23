@@ -2,6 +2,7 @@
 session_start();
 
 if (isset($_SESSION['role'])) {
+
 ?>
 
   <!DOCTYPE html>
@@ -16,10 +17,63 @@ if (isset($_SESSION['role'])) {
 
     <title>student</title>
 
+
+
   </head>
 
   <body>
-    <h1>students</h1>
+    <?php
+    include 'classes/dbh.class.php';
+    include 'classes/gradeM.class.php';
+    include 'classes/gradeC.class.php';
+
+    $grade = new Grade();
+    $id = $_SESSION['id'];
+
+    $grade = $grade->getresult($id);
+
+    ?>
+    <div>
+
+
+      <table border="1">
+        <tr>
+
+
+          <th>course code</th>
+          <th>test</th>
+          <th>mid</th>
+          <th>final</th>
+
+
+        </tr>
+        <?php foreach ($grade as $row) { ?>
+
+
+
+          <tr>
+            <td><?php echo htmlspecialchars($row['corsecode'])  ?> </td>
+            <td><?php echo htmlspecialchars($row['test1'])  ?></td>
+            <td><?php echo htmlspecialchars($row['mid'])  ?></td>
+            <td><?php echo htmlspecialchars($row['final']) ?></td>
+
+
+
+
+
+
+
+
+          </tr>
+        <?php  } ?>
+
+
+
+      </table>
+
+      </table>
+
+    </div>
   </body>
 
   </html>

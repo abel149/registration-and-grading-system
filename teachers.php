@@ -55,7 +55,7 @@ if (isset($_SESSION['role'])) {
             $result = $grade->getstudentresult();
 
             foreach ($result as $row) {
-                echo "id: " . $row['id'] . "sec: " . $row['sec'] . " - course code: " . $row['corsecode'] . " - test: " . $row['test1'] . " - mid: " . $row['mid'] . " - final: " . $row['final'] . "<br>";
+                echo "fname: " . $row['fname'] . "-lname: " . $row['lname'] . "-id: " . $row['id'] . "sec: " . $row['sec'] . " - course code: " . $row['corsecode'] . " - test: " . $row['test1'] . " - mid: " . $row['mid'] . " - final: " . $row['final'] . "<br>";
             }
 
             ?>
