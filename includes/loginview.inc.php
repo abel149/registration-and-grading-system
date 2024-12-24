@@ -22,11 +22,11 @@ if (isset($_POST['submit'])) {
 
 
 
-    if ($_SESSION['role'] == 'admin') {
+    if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
         header("location:../admin.php?error=none");
-    } else if ($_SESSION['role'] == 'student') {
+    } else if (isset($_SESSION['role']) && $_SESSION['role'] == 'student') {
         header("location:../student.php?error=none");
-    } else if ($_SESSION['role'] == 'teacher') {
+    } else if (isset($_SESSION['role']) && $_SESSION['role'] == 'teacher') {
         header("location:../teachers.php?error=none");
     } else if ($_SESSION['role'] == 'registral') {
         header("location:../register.php?error=none");
