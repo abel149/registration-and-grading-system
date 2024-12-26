@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
     } else if ($_SESSION['role'] == 'teacher') {
         header("location:../teachers.php?error=none");
     } else if ($_SESSION['role'] == 'registral') {
-        header("location:../registral.php?error=none");
+        header("location:../register.php?error=none");
     } else {
 
         header("location:../index.php?error=none");
