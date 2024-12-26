@@ -2,12 +2,12 @@
 //model class
 class login extends Dbh
 {
-    protected function getuser($uid, $pwd)
+    protected function getuser($uid, $pwd, $role)
     {
-        $stmt = $this->connect()->prepare('SELECT password FROM  user WHERE id=? ');
+        $stmt = $this->connect()->prepare('SELECT password FROM  user WHERE id=? AND role=?');
 
 
-        if (!$stmt->execute(array($uid))) {
+        if (!$stmt->execute(array($uid, $role))) {
             $stmt = null;
             header("location:../index.php?error=stmtfailed");
             exit();
@@ -27,9 +27,9 @@ class login extends Dbh
 
             exit();
         } else if ($checkpwd == true) {
-            $stmt = $this->connect()->prepare('SELECT * FROM  user WHERE id = ? ');
+            $stmt = $this->connect()->prepare('SELECT * FROM  user WHERE id = ?  AND role=?');
 
-            if (!$stmt->execute(array($uid))) {
+            if (!$stmt->execute(array($uid, $role))) {
                 $stmt = null;
                 header("location:../index.php?error=stmtfailed");
                 exit();

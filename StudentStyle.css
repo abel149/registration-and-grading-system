@@ -2,7 +2,7 @@
     padding: 1% 5% 1% 5%;
 }
 #Navigation{
-    background-color: #87b77b;
+    background-color: #4CAF50;
     color: white;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .navbar-brand{
-    font-family: "ubuntu";
+   font-family: "ubuntu";
    font-size: 2rem;
    margin-right: 18%;
    padding-top: 2rem;

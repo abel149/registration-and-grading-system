@@ -63,9 +63,8 @@ session_start();
             </div>
         </form>
     </div>
-    <footer>
-    <p>&copy; 2024 login | All Rights Reserved</p>
-  </footer>
+
+
 
 </body>
 

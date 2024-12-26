@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="adminTeacher.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="image/stmary.png">
 
     <title>Sanit Mary's University</title>
@@ -34,6 +34,7 @@
             <h1>Admin Teachers Dashboard</h1>
         </div>
         <div class="container">
+
 
             <div class="row g-5">
                 <div class="form-container col-lg-3">
@@ -83,3 +84,18 @@
                     <button type="submit" class="btn btn-success">Delete</button>
                 </div>
             </div>
+
+            <br>
+            <div class="logout-button">
+                <a href="includes/logout.php" class="btn btn-success log">Logout</a>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2024 Teacher Portal | All Rights Reserved</p>
+        </footer>
+
+
+
+    </body>
+
+</html>

@@ -11,7 +11,7 @@ if (isset($_POST['sub'])) {
     $semi = $_POST['semi'];
     $year = $_POST['year'];
     $pass = $_POST['pass'];
-    $role = $_POST['rol'];
+
     //instantiate signupcontr class
     include "../classes/dbh.class.php";
 
@@ -23,10 +23,12 @@ if (isset($_POST['sub'])) {
 
     //user signin
     // $register->getstudentstmt($id, $fname);
-    $register->setstudent($id, $fname, $lname, $dep, $sec, $semi, $year, $pass, $role);
+    $register->setstudent($id, $fname, $lname, $dep, $sec, $semi, $year, $pass);
     //$register->getstudent($id);thid doesent work
 
 
     //redirect to the home page
+
     header("location:adminRegistrar.php?error=none");
+
 }

@@ -22,7 +22,7 @@ class loginContr extends login
             exit();
         }
 
-        $this->getuser($this->uid, $this->pwd);
+        $this->getuser($this->uid, $this->pwd, $this->role);
     }
     private function emptyinput()
     {
