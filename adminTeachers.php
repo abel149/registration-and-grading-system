@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="adminTeacher.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="image/stmary.png">
 
     <title>Sanit Mary's University</title>
@@ -56,7 +56,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Password</label>
-                                <input type="text" class="form-control" id="password" name="pass" required>
+                                <input type="password" class="form-control" id="password" name="pass" required>
                             </div>
                             <button type="submit" class="btn btn-success" name="sub">Sign Up</button>
                             

@@ -23,9 +23,6 @@
    <title>Sanit Mary's University</title>
 </head>
 <body>
-          
-    </head>
-    <body>
         <!-- Header Section -->
         <div class="header">
             <h1>Admin Registrar Dashboard</h1>
@@ -65,7 +62,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Password</label>
-                                <input type="text" class="form-control" id="password" name="pass" required>
+                                <input type="password" class="form-control" id="password" name="pass" required>
                             </div>
                             <button type="submit" class="btn btn-success" name="sub">Sign Up</button>
                             
