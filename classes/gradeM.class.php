@@ -44,6 +44,20 @@ class Grade extends Dbh
         }
     }
 
+    public function getstudentresultbyid($id)
+    {
+        try {
+            $sql = "SELECT * FROM grade WHERE stud_id = ?";
+            $stm = $this->connect()->prepare($sql);
+            $stm->execute([$id]);
+            return $stm->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            // Log error and return an empty array or handle appropriately
+            error_log("Error fetching students: " . $e->getMessage());
+            return [];
+        }
+    }
+
 
     protected function submit($id, $code, $test, $mid, $final, $grade)
     {
