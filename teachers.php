@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -115,22 +116,26 @@
     <div id="view">
         <?php
 
-        include 'classes/dbh.class.php';
+             include 'classes/dbh.class.php';
         include 'classes/gradeM.class.php';
         include 'classes/gradeC.class.php';
+            $grade = new Grade();
+            $result = $grade->getstudentresult();
 
-        $grade = new Grade();
-        $result = $grade->getstudentresult();
+            foreach ($result as $row) {
+                echo "fname: " . $row['fname'] . "-lname: " . $row['lname'] . "-id: " . $row['id'] . "sec: " . $row['sec'] . " - course code: " . $row['corsecode'] . " - test: " . $row['test1'] . " - mid: " . $row['mid'] . " - final: " . $row['final'] . "<br>";
+            }
 
-        foreach ($result as $row) {
-            echo "id: " . $row['id'] . "sec: " . $row['sec'] . " - course code: " . $row['corsecode'] . " - test: " . $row['test1'] . " - mid: " . $row['mid'] . " - final: " . $row['final'] . "<br>";
-        }
+            ?>
+        </div>
+        <div id="sec">
 
         ?>
     </div>
 
 
 
+            ?>
 
     <div id="sec">
 
@@ -157,10 +162,15 @@
 
 
 
+                            <tr>
+
 
     </div>
 
 
+
+
+                                <td><input type='text' name='id[]' value="<?php echo htmlspecialchars($name['id']) ?>"></td>
 
 
 
@@ -175,6 +185,7 @@
             $view = new Grade();
             $names = $view->getstudentstmt($section, $year, $semi);
             $codes = $view->getcoursecode();
+
 
         ?>
 
@@ -210,6 +221,10 @@
                 <button type="submit" class="btn btn-success" name="sub">Submit Grades</button>
             </div>
 
+                            </tr>
+                        <?php  } ?>
+                        <button type="submit" name="sub">Submit Grades</button>
+                        </form>
 
 
 
@@ -217,4 +232,5 @@
     </div>
 </body>
 
-</html>
+
+<?php } ?>

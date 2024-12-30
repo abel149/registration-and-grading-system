@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 include 'classes/dbh.class.php';
 include 'classes/gradeM.class.php';
 include 'classes/gradeC.class.php';
@@ -12,9 +13,18 @@ $display = $result->getstudentresultbyid($_SESSION['userid']);
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+if (isset($_SESSION['role'])) {
+
+
+?>
+
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -35,7 +45,7 @@ $display = $result->getstudentresultbyid($_SESSION['userid']);
 
   <title>Saint Mary's University</title>
 
-</head>
+    <!-- Bootstrap -->
 
 <body>
   <section id="Navigation">
@@ -119,4 +129,68 @@ $display = $result->getstudentresultbyid($_SESSION['userid']);
   </section>
 </body>
 
-</html>
+
+    <title>student</title>
+
+
+
+  </head>
+
+  <body>
+    <?php
+    include 'classes/dbh.class.php';
+    include 'classes/gradeM.class.php';
+    include 'classes/gradeC.class.php';
+
+    $grade = new Grade();
+    $id = $_SESSION['id'];
+
+    $grade = $grade->getresult($id);
+
+    ?>
+    <div>
+
+
+      <table border="1">
+        <tr>
+
+
+          <th>course code</th>
+          <th>test</th>
+          <th>mid</th>
+          <th>final</th>
+
+
+        </tr>
+        <?php foreach ($grade as $row) { ?>
+
+
+
+          <tr>
+            <td><?php echo htmlspecialchars($row['corsecode'])  ?> </td>
+            <td><?php echo htmlspecialchars($row['test1'])  ?></td>
+            <td><?php echo htmlspecialchars($row['mid'])  ?></td>
+            <td><?php echo htmlspecialchars($row['final']) ?></td>
+
+
+
+
+
+
+
+
+          </tr>
+        <?php  } ?>
+
+
+
+      </table>
+
+      </table>
+
+    </div>
+  </body>
+
+  </html>
+
+<?php } ?>

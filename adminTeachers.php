@@ -36,6 +36,8 @@
         <div class="container">
 
 
+
+
             <div class="row g-5">
                 <div class="form-container col-lg-3">
                     <h3>Sign Up Teacher</h3>
@@ -53,7 +55,9 @@
                             <input type="text" class="form-control" id="lname" name="lname" required>
                         </div>
                         <div class="mb-3">
-                            <label for="coursecode" class="form-label">coursecode</label>
+
+                            <label for="coursecode" class="form-label">Course Code</label>
+                           
                             <input type="text" class="form-control" id="coursecode" name="coursecode" required>
                         </div>
                         <div class="mb-3">
@@ -73,6 +77,7 @@
                                 <th>First Name</th>
                                 <th>Last Name</th>
                                 <th>Course_Code</th>
+
                                 <th>Date</th>
                                 <th>Role</th>
                             </tr>
@@ -81,9 +86,11 @@
                             <!-- Dynamic teacher data will appear here -->
                         </tbody>
                     </table>
+
                     <button type="submit" class="btn btn-success">Delete</button>
                 </div>
             </div>
+
 
             <br>
             <div class="logout-button">

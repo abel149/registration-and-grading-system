@@ -20,9 +20,22 @@ class Grade extends Dbh
     public function getstudentresult()
     {
         try {
-            $sql = "SELECT * FROM grade INNER JOIN student ON grade.stud_id = student.id";
+            $sql = "SELECT * FROM grade INNER JOIN student ON grade.stud_id = student.id INNER JOIN info ON student.id = info.id";
             $stm = $this->connect()->prepare($sql);
             $stm->execute();
+            return $stm->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            // Log error and return an empty array or handle appropriately
+            error_log("Error fetching students: " . $e->getMessage());
+            return [];
+        }
+    }
+    public function getresult($id)
+    {
+        try {
+            $sql = "SELECT * FROM grade WHERE stud_id = ?";
+            $stm = $this->connect()->prepare($sql);
+            $stm->execute([$id]);
             return $stm->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
             // Log error and return an empty array or handle appropriately
