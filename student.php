@@ -70,7 +70,7 @@ $display = $result->getstudentresultbyid($_SESSION['userid']);
               <a class="nav-bnt btn btn-light nav-link" href="#bottom">Profile</a>
             </li>
             <li class="nav-item">
-              <a class="nav-bnt btn btn-light nav-link log" href="login/index.html">Logout</a>
+              <a class="nav-bnt btn btn-light nav-link log" href="includes/logout.php">Logout</a>
             </li>
           </ul>
         </div>
