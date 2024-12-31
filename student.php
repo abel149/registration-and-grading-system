@@ -85,9 +85,6 @@ $display = $result->getstudentresultbyid($_SESSION['userid']);
 
 
 
-
-
-
     <h5><?php echo $_SESSION['userid'] ?></h5>
     <table border="1">
       <tr>
