@@ -47,7 +47,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<p>Name: $name</p>";
         echo "<p>Email: $email</p>";
         echo "<p>Age: $age</p>";
-        // Password is typically not displayed for security reasons
     }
 }
 ?>
