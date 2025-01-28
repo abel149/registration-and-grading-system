@@ -25,9 +25,56 @@ if (isset($_SESSION['role'])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="adminstyle.css">
+    <link rel="stylesheet" href="">
 
   </head>
+  <style>
+    body {
+   
+   margin: 0;
+   padding: 0;
+   background-color: #f4f4f9;
+}
+
+header {
+   font-family: montserrat;
+   background-color: #4CAF50;
+   color: white;
+   padding: 40px;
+   text-align: center;
+}
+
+
+.container-fluid {
+   padding: 2% 5%;
+}
+.card{
+   font-family: ubuntu;
+   padding: 10px;
+}
+.card:hover{
+   transform: scale(1.005);
+}
+.card-header,.card-body{
+   text-align: center;
+}
+
+.section h3 {
+   margin-bottom: 20px;
+   color: #4CAF50;
+}
+.logout-button{
+   margin: 3rem;
+   text-align: center;
+}
+footer {
+   background-color: #333;
+   color: white;
+   text-align: center;
+   padding: 1rem;
+  
+}
+  </style>
 
   <body>
 
@@ -39,12 +86,12 @@ if (isset($_SESSION['role'])) {
     <div class="container-fluid">
       <div class="row g-4">
 
-        <!-- Student Portal Section -->
+        <!-- Department Portal Section -->
         <div class="card col-lg-6 mb-3">
-          <h3 class="card-header">Student</h3>
+          <h3 class="card-header">View Departments</h3>
           <div class="card-body">
-            <p class="card-text">View student information and records</p>
-            <a href="#" class="btn btn-success">View Student</a>
+            <p class="card-text">View and manage all departments in the institution</p>
+            <a href="department.php" class="btn btn-success">View Department</a>
           </div>
         </div>
 
@@ -64,7 +111,7 @@ if (isset($_SESSION['role'])) {
           <h3 class="card-header">Registrar</h3>
           <div class="card-body">
             <p class="card-text">Access registrar functionalities and records</p>
-            <a href="#" class="btn btn-success">View Registrar</a>
+            <a href="adminRegister.php" class="btn btn-success">View Registrar</a>
           </div>
         </div>
 
@@ -77,18 +124,7 @@ if (isset($_SESSION['role'])) {
             <a href="#" class="btn btn-success">Edit Result</a>
           </div>
         </div>
-
-        <!-- View Departments Section -->\
-
-        <div class="card">
-          <h3 class="card-header">View Departments</h3>
-          <div class="card-body">
-            <p class="card-text">View and manage all departments in the institution</p>
-            <a href="department.php" class="btn btn-success">View Department</a>
-          </div>
-        </div>
-
-      </div>
+    </div>
     </div>
 
     <div class="logout-button">

@@ -38,7 +38,7 @@ $display = $result->getstudentresultbyid($_SESSION['userid']);
 
   <title>Saint Mary's University</title>
 
-  <!-- Bootstrap -->
+</head>
 
 <body>
   <section id="Navigation">
@@ -86,7 +86,7 @@ $display = $result->getstudentresultbyid($_SESSION['userid']);
 
 
     <h5><?php echo $_SESSION['userid'] ?></h5>
-    <table border="1">
+    <table border="1" class="table table-sm">
       <tr>
 
         <th>course code</th>
