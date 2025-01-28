@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,11 +23,77 @@ session_start();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="adminTeacher.css">
+    <link rel="stylesheet" href="register.css">
 
     <link rel="icon" href="image/stmary.png">
 
 </head>
+<style>
+    .container-fluid{
+    padding: 2% 5% 2% 5%;
+}
+#Navigation{
+    background-color: #4CAF50;
+    color: white;
+}
+
+.logo{
+    width: 100px;
+    height: 150px;
+    margin-right: 20px;
+    padding-top: 5px;   
+}
+
+.navbar-brand{
+    font-family: "ubuntu";
+   font-size: 2rem;
+   margin-right: 5%;
+   padding-top: 2rem;
+   color: white;
+}
+.log{
+    font-weight: bold;
+}
+.d-flex{
+    margin-left: 20px;
+}
+.nav-bnt{
+    margin-right: 3px;
+    color: white;
+}
+
+
+
+body {
+    background-color: #f4f6f9;
+}
+.header {
+    color: black;
+    padding: 30px 0;
+    text-align: center;
+    font-family: ubuntu;
+}
+.container {
+    margin-top: 30px;
+}
+.form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
+}
+.table-container {
+    margin-top: 30px;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+   
+}
+</style>
 
 <body>
     <section id="Navigation">
@@ -43,7 +110,7 @@ session_start();
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav ">
                         <li class="nav-item">
-                            <a class="nav-bnt btn btn-light nav-link" aria-current="page" href="#">HOME</a>
+                            <a class="nav-bnt btn btn-light nav-link" aria-current="page" href="index.php">HOME</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-bnt btn btn-light nav-link" href="#studentRegister">Student Registration</a>
@@ -129,9 +196,10 @@ session_start();
             </div>
 
     </section>
-
+    <footer>
+      <p>&copy; 2024 Registrar Portal | All Rights Reserved</p>
+    </footer>
 </body>
-
 </html>
 
 
@@ -148,7 +216,5 @@ session_start();
 
 
 
-<br>
-<br>
-<br>
-<br>
+
+

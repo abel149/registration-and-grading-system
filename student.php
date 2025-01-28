@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 include 'classes/dbh.class.php';
 include 'classes/gradeM.class.php';
 include 'classes/gradeC.class.php';
@@ -9,6 +10,8 @@ $result = new Grade();
 $display = $result->getstudentresultbyid($_SESSION['userid']);
 
 ?>
+<!DOCTYPE html>
+<html lang="en">
 <!DOCTYPE html>
 <html lang="en">
 
@@ -82,11 +85,8 @@ $display = $result->getstudentresultbyid($_SESSION['userid']);
 
 
 
-
-
-
     <h5><?php echo $_SESSION['userid'] ?></h5>
-    <table border="1">
+    <table border="1" class="table table-sm">
       <tr>
 
         <th>course code</th>
@@ -117,6 +117,7 @@ $display = $result->getstudentresultbyid($_SESSION['userid']);
 
 
   </section>
-</body>
+
+
 
 </html>
