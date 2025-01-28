@@ -26,6 +26,83 @@
 
 
     <style>
+        .container-fluid {
+            padding: 2% 5% 2% 5%;
+        }
+
+        #Navigation {
+            background-color: #4CAF50;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 150px;
+            margin-right: 20px;
+            padding-top: 5px;
+        }
+
+        .navbar-brand {
+            font-family: "ubuntu";
+            font-size: 2rem;
+            margin-right: 5%;
+            padding-top: 2rem;
+            color: white;
+        }
+
+        .log {
+            font-weight: bold;
+        }
+
+        .d-flex {
+            margin-left: 20px;
+        }
+
+        .nav-bnt {
+            margin-right: 3px;
+            color: white;
+        }
+
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            font-family: ubuntu;
+        }
+
+        body {
+            background-color: #f4f6f9;
+        }
+
+        .container {
+            margin-top: 30px;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            margin-right: 10px;
+            margin: auto;
+            margin-bottom: 100px;
+        }
+
+        .table-container {
+            margin-top: 30px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+
+        }
+
         .table {
             border: 2px solid #ccc;
 
@@ -62,18 +139,20 @@
                         <li class="nav-item">
                             <a class="nav-bnt btn btn-light nav-link" href="#"
                                 onclick="
-                                    document.getElementById('sec').style.display = 'block';
-                                    document.getElementById('subbtn').style.display = 'none';
-                                    document.getElementById('upbtn').style.display = 'none';
+                                   document.getElementById('sec').style.display = 'block';
+                                  document.getElementById('view').style.display = 'none';
+                                   // document.getElementById('subbtn').style.display = 'none';
+                                  //  document.getElementById('upbtn').style.display = 'none';
                                     " id="subbtn">Submit Grade</a>
                         </li>
 
                         <li class="nav-item">
                             <a class="nav-bnt btn btn-light nav-link" href="#"
                                 onclick="
+                                document.getElementById('sec').style.display = 'none';
                                     document.getElementById('view').style.display = 'block';
-                                    document.getElementById('subbtn').style.display = 'none';
-                                    document.getElementById('upbtn').style.display = 'none';
+                                   // document.getElementById('subbtn').style.display = 'none';
+                                   // document.getElementById('upbtn').style.display = 'none';
                                     " id="upbtn">View Student List</a>
                         </li>
 
@@ -86,32 +165,6 @@
 
     </section>
 
-
-
-
-
-
-
-
-
-
-
-    <div>
-        <button onclick="
-                        document.getElementById('sec').style.display = 'block';
-                        document.getElementById('subbtn').style.display = 'none';
-                        document.getElementById('upbtn').style.display = 'none';"
-            id="subbtn">submit grade</button>
-
-        <button
-            onclick="
-          document.getElementById('view').style.display = 'block';
-          document.getElementById('subbtn').style.display = 'none';
-          document.getElementById('upbtn').style.display = 'none';"
-            id="upbtn">update grade</button>
-    </div>
-
-
     <div id="view">
         <?php
 
@@ -121,11 +174,47 @@
         $grade = new Grade();
         $result = $grade->getstudentresult();
 
-        foreach ($result as $row) {
-            echo "fname: " . $row['fname'] . "-lname: " . $row['lname'] . "-id: " . $row['id'] . "sec: " . $row['sec'] . " - course code: " . $row['corsecode'] . " - test: " . $row['test1'] . " - mid: " . $row['mid'] . " - final: " . $row['final'] . "<br>";
-        }
+
 
         ?>
+        <table class="table table-striped table-bordered mt-3">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>First-Name</th>
+                            <th>Last-Name</th>
+                            <th>Section</th>
+                            <th>Course-Code</th>
+                            <th>Test-1</th>
+                            <th>Assignment</th>
+                            <th>Mid</th>
+                            <th>Final</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody id="registrarTableBody">
+                        <!-- Dynamic teacher data will appear here -->
+                        <?php foreach ($result as $row) { ?>
+
+                            
+                            <form action="includes/gradeV.inc.php" method="POST">
+                                <tr>
+                                    <td><?php echo $row['id']?></td>
+                                    <td><?php echo $row['fname']?></td>
+                                    <td><?php echo $row['lname']?></td>
+                                    <td><?php echo $row['sec']?></td>
+                                    <td><?php echo $row['corsecode']?></td>
+                                    <td><?php echo $row['test1']?></td>
+                                    <td><?php echo $row['assignment']?></td>
+                                    <td><?php echo $row['mid']?></td>
+                                    <td><?php echo $row['final']?></td>
+                                    <td></td>
+                                </tr>
+
+                            <?php  } ?>
+                    </tbody>
+                </table>
+       
     </div>
 
 
@@ -151,16 +240,8 @@
 
             </form>
         </div>
-
-
-
         <tr>
-
-
     </div>
-
-
-
     <div>
         <?php
 
@@ -209,11 +290,6 @@
 
             </tr>
         <?php  } ?>
-
         </form>
-
-
-
-
     </div>
 </body>

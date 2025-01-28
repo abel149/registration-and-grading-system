@@ -78,46 +78,27 @@ $display = $result->getstudentresultbyid($_SESSION['userid']);
 
   </section>
   <br />
-  <br />
-  <br />
-  <br />
+ 
   <section>
-
-
-
     <h5><?php echo $_SESSION['userid'] ?></h5>
     <table border="1" class="table table-sm">
       <tr>
-
-        <th>course code</th>
-        <th>test</th>
-        <th>mid</th>
-        <th>final</th>
+        <th>Course code</th>
+        <th>Test</th>
+        <th>Mid</th>
+        <th>Final</th>
         <th>Grade</th>
       </tr>
 
       <?php foreach ($display as $res) { ?>
-
-
         <tr>
-
           <td><?php echo $res['corsecode'] ?></td>
           <td><?php echo $res['test1'] ?></td>
           <td><?php echo $res['mid'] ?></td>
           <td><?php echo $res['final'] ?></td>
-
           <td></td>
         </tr>
-
       <?php  } ?>
-
-
     </table>
-
-
-
   </section>
-
-
-
 </html>

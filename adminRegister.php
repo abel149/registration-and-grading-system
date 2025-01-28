@@ -79,26 +79,7 @@ footer {
                                 <label for="lastName" class="form-label">Last Name</label>
                                 <input type="text" class="form-control" id="lname" name="lname" required>
                             </div>
-                            <div class="mb-3">
-                                <label for="sec" class="form-label">Section</label>
-                                <input type="text" class="form-control" id="sec" name="sec" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="dep" class="form-label">Department</label>
-                                <input type="text" class="form-control" id="dep" name="dep" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="year" class="form-label">Year</label>
-                                <input type="text" class="form-control" id="year" name="year" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="semi" class="form-label">Semister</label>
-                                <input type="text" class="form-control" id="semi" name="semi" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="password" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="password" name="pass" required>
-                            </div>
+                            
                             <button type="submit" class="btn btn-success" name="sub">Sign Up</button>
                             
                         </form>
@@ -111,11 +92,8 @@ footer {
                             <th>ID</th>
                             <th>First Name</th>
                             <th>Last Name</th>
-                            <th>Section</th>
-                            <th>Department</th>
-                            <th>Year</th>
-                            <th>Semister</th>
-                            <th>Password</th>
+                            
+                            
                         </tr>
                     </thead>
                     <tbody id="registrarTableBody">
