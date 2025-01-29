@@ -54,6 +54,7 @@ footer {
     text-align: center;
     padding: 1rem;
     margin-top:2rem;
+    margin-bottom:0;
    
 }
 </style>

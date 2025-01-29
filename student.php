@@ -32,13 +32,144 @@ $display = $result->getstudentresultbyid($_SESSION['userid']);
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="StudentStyle.css">
+  <link rel="stylesheet" href="">
 
   <link rel="icon" href="image/stmary.png">
 
   <title>Saint Mary's University</title>
 
 </head>
+<style>
+  .container-fluid{
+    padding: 1% 5% 1% 5%;
+}
+#Navigation{
+    background-color: #4CAF50;
+    color: white;
+}
+
+.logo{
+    width: 100px;
+    height: 150px;
+    margin-right: 20px;
+    padding-top: 5px;   
+}
+.fa-solid{
+    margin-left: 5px;
+}
+
+.navbar-brand{
+   font-family: "ubuntu";
+   font-size: 2rem;
+   margin-right: 18%;
+   padding-top: 2rem;
+   color: white;
+}
+.log{
+    font-weight: bold;
+}
+.d-flex{
+    margin-left: 20px;
+}
+.nav-bnt{
+    margin-right: 6px;
+    color: white;
+}
+.table-center{
+  padding:2% 5% 2% 5%;
+}
+.table {
+            border: 2px solid #ccc;
+
+        }
+        #st-grade{
+          display:none;
+
+        }
+        #profile {
+            background-color:rgba(97, 168, 103, 0.1);
+            padding: 30px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            width: 500px;
+            margin: auto;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 15px; /* Space between image & text */
+        }
+        .img-profile {
+            width: 170px;
+            height:170px;
+            border-radius: 50%;
+            
+        }
+        .info {
+            text-align: left;
+        }
+         /* Welcome Section */
+         .welcome {
+            text-align: center;
+            padding: 40px;
+            background: white;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .welcome h1 {
+            font-size: 28px;
+        }
+
+        /* News Sections */
+        .news-container {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            gap: 20px;
+        }
+        .news {
+            flex: 1;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .news h2 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .news ul {
+            list-style: none;
+            padding: 0;
+        }
+        .news ul li {
+            margin: 10px 0;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .news ul li a {
+            text-decoration: none;
+            color:rgb(36, 37, 36);
+            font-weight: bold;
+        }
+        .news ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        #footer {
+            text-align: center;
+            padding: 15px;
+            background:rgb(105, 182, 105);
+            color: white;
+            margin-top: 20px;
+        }
+        #stud-home{
+          padding:3% 3%;
+        }
+        
+</style>
 
 <body>
   <section id="Navigation">
@@ -55,13 +186,19 @@ $display = $result->getstudentresultbyid($_SESSION['userid']);
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
           <ul class="navbar-nav ">
             <li class="nav-item">
-              <a class="nav-bnt btn btn-light nav-link" aria-current="page" href="#">HOME</a>
+              <a class="nav-bnt btn btn-light nav-link" aria-current="page" href="#stud-home">HOME</a>
             </li>
             <li class="nav-item">
               <a class="nav-bnt btn btn-light nav-link" href="#news">Course Outline</a>
             </li>
             <li class="nav-item">
-              <a class="nav-bnt btn btn-light nav-link" href="#vision-about">Grading Summary</a>
+              <a class="nav-bnt btn btn-light nav-link" href="#vision-about" 
+                                onclick="
+                                document.getElementById('st-grade').style.display = 'block';
+                                document.getElementById('stud-home').style.display = 'none';
+                                document.getElementById('footer').style.display = 'none';
+                                //document.getElementById('stud-home').style.display = 'block';
+                                ">Grading Summary</a>
             </li>
             <li class="nav-item">
               <a class="nav-bnt btn btn-light nav-link" href="#bottom">Module</a>
@@ -77,11 +214,57 @@ $display = $result->getstudentresultbyid($_SESSION['userid']);
       </nav>
 
   </section>
-  <br />
+  <br>
+  <br>
+  <section id="stud-home">
+  <div class="welcome">
+        <h1>Welcome to the University Student Portal</h1>
+        <p>Your one-stop destination for university updates and technology news.</p>
+    </div>
+
+    <!-- News Sections -->
+    <div class="news-container">
+        <!-- University News -->
+        <div class="news">
+            <h2>University News</h2>
+            <ul>
+                <li><a href="#">📢 Semester Registration Open - Apply Now!</a></li>
+                <li><a href="#">🎓 Graduation Ceremony - Important Details</a></li>
+                <li><a href="#">🏆 University Sports Fest - Register Your Team</a></li>
+                <li><a href="#">📅 Mid-term Exam Schedule Released</a></li>
+            </ul>
+        </div>
+
+        <!-- Technology News -->
+        <div class="news">
+            <h2>Technology News</h2>
+            <ul>
+                <li><a href="#">🚀 AI Revolution: How AI is Changing Education</a></li>
+                <li><a href="#">💻 Top 10 Programming Languages in 2025</a></li>
+                <li><a href="#">📱 The Future of Smartphones - What's Next?</a></li>
+                <li><a href="#">🔒 Cybersecurity Tips Every Student Should Know</a></li>
+            </ul>
+        </div>
+    </div>
+  </section>
+  <!-- Footer -->
+<div id="footer">
+        <p>&copy; 2025 University Student Portal. All Rights Reserved.</p>
+    </div>
+
  
-  <section>
-    <h5><?php echo $_SESSION['userid'] ?></h5>
-    <table border="1" class="table table-sm">
+  <section id="st-grade">
+  <div id="profile">
+        <img class="img-profile "src="image/566.jpg" alt="Profile Picture">
+        <div class="info">
+            <h4>ID: <?php echo $_SESSION['userid'] ?></h4>
+            <p>Department: Computer-Scinece</p>
+        </div>
+    </div>
+
+  
+    <div class="table-center">
+    <table border="1" class="table table-striped table-bordered mt-3">
       <tr>
         <th>Course code</th>
         <th>Test</th>
@@ -100,5 +283,7 @@ $display = $result->getstudentresultbyid($_SESSION['userid']);
         </tr>
       <?php  } ?>
     </table>
+    </div>
+    
   </section>
 </html>

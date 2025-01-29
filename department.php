@@ -61,6 +61,10 @@ h2{
 .card-header,.card-body{
     text-align: center;
 }
+.logout-button{
+  text-align:center;
+  padding:1rem 0 2rem 0;
+}
 footer {
     background-color: #333;
     color: white;
@@ -194,6 +198,9 @@ footer {
 
       </div>
       </div>
+      <div class="logout-button">
+                <a href="includes/logout.php" class="btn btn-success log">Logout</a>
+            </div>
 
 </section>
      

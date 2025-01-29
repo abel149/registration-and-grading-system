@@ -88,6 +88,7 @@
             margin-right: 10px;
             margin: auto;
             margin-bottom: 100px;
+            
         }
 
         .table-container {
@@ -115,6 +116,53 @@
         #view {
             display: none;
         }
+        .table-center{
+  padding:2% 5% 2% 5%;
+}
+.welcome {
+            
+            color:black;
+            padding: 20px;
+            text-align: center;
+        }
+        .welcome h1 {
+            margin: 0;
+        }
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(134, 190, 116, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        .card h3 {
+            color:black;
+        }
+        .card a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color:rgb(105, 182, 105);
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .card a:hover {
+            background-color: #0056b3;
+        }
+        .footer-home {
+            background-color:rgb(105, 182, 105);
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -141,8 +189,8 @@
                                 onclick="
                                    document.getElementById('sec').style.display = 'block';
                                   document.getElementById('view').style.display = 'none';
-                                   // document.getElementById('subbtn').style.display = 'none';
-                                  //  document.getElementById('upbtn').style.display = 'none';
+                                   document.getElementById('teacher-home').style.display = 'none';
+                                   document.getElementById('footer-home').style.display = 'block';
                                     " id="subbtn">Submit Grade</a>
                         </li>
 
@@ -151,8 +199,8 @@
                                 onclick="
                                 document.getElementById('sec').style.display = 'none';
                                     document.getElementById('view').style.display = 'block';
-                                   // document.getElementById('subbtn').style.display = 'none';
-                                   // document.getElementById('upbtn').style.display = 'none';
+                                   document.getElementById('teacher-home').style.display = 'none';
+                                
                                     " id="upbtn">View Student List</a>
                         </li>
 
@@ -164,7 +212,69 @@
             </nav>
 
     </section>
+    <section id="teacher-home">
+        <div class="container-fluid">
+<!-- Header Section -->
+<div class="welcome">
+        <h1>Welcome to the University Teacher Portal</h1>
+        <p>Manage your courses, assignments, and student performance</p>
+    </div>
 
+    <!-- Dashboard Section -->
+    <div class="dashboard">
+        <!-- Course Management Card -->
+        <div class="card">
+            <h4>📚 Manage Courses</h4>
+            <p>View and manage your courses</p>
+            <a href="#">Go to Courses</a>
+        </div>
+
+        <!-- Assignment Grading Card -->
+        <div class="card">
+            <h4>📝 Grade Assignments</h4>
+            <p>Grade and review student assignments</p>
+            <a href="#">Go to Grading</a>
+        </div>
+
+        <!-- Student Performance Card -->
+        <div class="card">
+            <h4>📊 Student Performance</h4>
+            <p>Track and analyze student progress</p>
+            <a href="#">View Performance</a>
+        </div>
+
+        <!-- Exam Scheduling Card -->
+        <div class="card">
+            <h4>📅 Schedule Exams</h4>
+            <p>Set and manage exam schedules</p>
+            <a href="#">Schedule Exam</a>
+        </div>
+
+        <!-- Communication Card -->
+        <div class="card">
+            <h4>💬 Communication</h4>
+            <p>Send messages to students</p>
+            <a href="#">Send Message</a>
+        </div>
+
+        <!-- Resources Card -->
+        <div class="card">
+            <h4>🔗 Resources</h4>
+            <p>Access teaching resources and materials</p>
+            <a href="#">View Resources</a>
+        </div>
+    </div>
+
+    
+        </div>
+        <!-- Footer Section -->
+    <footer class="footer-home">
+        <p>&copy; 2025 University Teacher Portal</p>
+    </footer>
+ 
+
+    </section>
+    
     <div id="view">
         <?php
 
@@ -177,6 +287,7 @@
 
 
         ?>
+        <div class="table-center">
         <table class="table table-striped table-bordered mt-3">
                     <thead>
                         <tr>
@@ -193,7 +304,7 @@
                         </tr>
                     </thead>
                     <tbody id="registrarTableBody">
-                        <!-- Dynamic teacher data will appear here -->
+                        
                         <?php foreach ($result as $row) { ?>
 
                             
@@ -215,13 +326,15 @@
                     </tbody>
                 </table>
        
+        </div>
+        
     </div>
 
 
     <div id="sec">
 
         <div class="form-container col-lg-3">
-            <h4>Fill the form to register</h4>
+            <h4>Submit Grades To...</h4>
             <form id="registerForm" method="POST">
 
                 <div class="mb-3">
@@ -236,13 +349,13 @@
                     <label for="semi" class="form-label">Enter Semister</label>
                     <input type="text" class="form-control" id="semi" name="semi" required>
                 </div>
-                <button type="submit" class="btn btn-success" name="sub">submit</button>
+                <button type="submit" class="btn btn-success" name="sub" style={text-align:center;}>OKAY</button>
 
             </form>
         </div>
         <tr>
     </div>
-    <div>
+    
         <?php
 
         if (isset($_POST['sub'])) {
@@ -255,7 +368,7 @@
 
 
         ?>
-
+       
             <div class="table-container">
                 <table class="table table-striped table-bordered mt-3">
                     <thead>
@@ -263,6 +376,7 @@
                             <th>ID</th>
                             <th>Course Code</th>
                             <th>Test</th>
+                            <th>Assignment</th>
                             <th>Mid Exam</th>
                             <th>Final Exam</th>
                             <th>Grade</th>
@@ -277,7 +391,7 @@
                                     <td><input type='text' name='coursecode[]'></td>
                                     <td><input type='text' name='test[]'></td>
                                     <td><input type='text' name='mid[]'></td>
-
+                                    <td><input type='text' name='assignment[]'></td>
                                     <td><input type='text' name='final[]'></td>
                                     <td><input type='text' name='grade[]'></td>
                                 </tr>
@@ -292,4 +406,5 @@
         <?php  } ?>
         </form>
     </div>
+   
 </body>
