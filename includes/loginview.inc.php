@@ -8,6 +8,7 @@ if (isset($_POST['submit'])) {
 
 
 
+
     //instantiating singupcintr class
     include '../classes/dbh.class.php';
     include '../classes/loginmodel.class.php';
@@ -17,14 +18,18 @@ if (isset($_POST['submit'])) {
     //runnig error hundling and user signup
     $login->loginuser();
     //going to back to front page
-    if ($_SESSION['role'] == 'admin') {
+    session_start();
+
+
+
+    if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
         header("location:../admin.php?error=none");
-    } else if ($_SESSION['role'] == 'student') {
+    } else if (isset($_SESSION['role']) && $_SESSION['role'] == 'student') {
         header("location:../student.php?error=none");
-    } else if ($_SESSION['role'] == 'teacher') {
+    } else if (isset($_SESSION['role']) && $_SESSION['role'] == 'teacher') {
         header("location:../teachers.php?error=none");
     } else if ($_SESSION['role'] == 'registral') {
-        header("location:../registral.php?error=none");
+        header("location:../register.php?error=none");
     } else {
 
         header("location:../index.php?error=none");

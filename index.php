@@ -25,8 +25,6 @@
     <title>Sanit Mary's University</title>
 </head>
 <body>
-  
-
     <section id = "Navigation" >
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg ">
@@ -46,10 +44,10 @@
                           <li class="nav-item dropdown">
                             <a class="nav-bnt btn btn-light nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#course" role="button" aria-expanded="false">COURSES</a>
                             <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#">Accounting and Finance</a></li>
-                              <li><a class="dropdown-item" href="#">Computer Science</a></li>
-                              <li><a class="dropdown-item" href="#">Managment</a></li>
-                              <li><a class="dropdown-item" href="#">Marketing</a></li>
+                              <li><a class="dropdown-item" href="accounting.php">Accounting and Finance</a></li>
+                              <li><a class="dropdown-item" href="computer.php">Computer Science</a></li>
+                              <li><a class="dropdown-item" href="managment.php">Managment</a></li>
+                              <li><a class="dropdown-item" href="marketing.php">Marketing</a></li>
                             </ul>
                           </li>
                           <li class="nav-item">
@@ -90,44 +88,44 @@
     
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="card img-thumbnail course-font card-hover">
-                    <img src="image/accounting.JPG" class="card-img-top card-image" title="click to learn more">
+                    <img src="image/accounting.JPG" class="card-img-top card-image img-fluid" title="click to learn more">
                     <div class="card-body">
                       <h5 class="card-title">ACCOUNTING AND FINANCE</h5>
                       <p class="card-text">Unlock your financial potential with our comprehensive Accounting course. Master key concepts, from bookkeeping to financial analysis, with expert-led lessons. Enroll now to advance your career and gain essential skills for success in any industry!</p>
-                      <a href="#" class="btn btn-primary">LEARN MORE</a>
+                      <a href="accounting.php" class="btn btn-primary">LEARN MORE</a>
                     </div>
                   </div>    
             </div>
            
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="card img-thumbnail course-font card-hover">
-                    <img src="image/computer.JPG" class="card-img-top card-image" title="click to learn more">
+                    <img src="image/computer.JPG" class="card-img-top card-image img-fluid" title="click to learn more">
                     <div class="card-body">
                       <h5 class="card-title">COMPUTER SCIENCE</h5>
                       <p class="card-text">Unlock the world of technology with our Computer Science course! Learn coding, algorithms, and software development from industry experts. Enroll today to build a strong foundation for a successful career in tech!</p>
-                      <a href="#" class="btn btn-primary">LEARN MORE</a>
+                      <a href="computer.php" class="btn btn-primary">LEARN MORE</a>
                     </div>
                   </div>    
             </div>
            
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="card img-thumbnail course-font card-hover">
-                    <img src="image/marketing.jpg" class="card-img-top card-image" title="click to learn more">
+                    <img src="image/marketing.jpg" class="card-img-top card-image img-fluid" title="click to learn more">
                     <div class="card-body">
                       <h5 class="card-title">MARKETING</h5>
                       <p class="card-text">Boost your career with our dynamic Marketing course! Master digital strategies, consumer behavior, and brand building from industry professionals. Enroll now to become a marketing expert and lead successful campaigns!</p>
-                      <a href="#" class="btn btn-primary">LEARN MORE</a>
+                      <a href="marketing.php" class="btn btn-primary">LEARN MORE</a>
                     </div>
                   </div>    
             </div>
             
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="card img-thumbnail course-font card-hover">
-                    <img src="image/managment.JPG" class="card-img-top card-image" title="click to learn more">
+                    <img src="image/managment.JPG" class="card-img-top card-image img-fluid" title="click to learn more">
                     <div class="card-body">
                       <h5 class="card-title">MANAGMENT</h5>
                       <p class="card-text">Elevate your career with our comprehensive Management course! Learn key leadership skills, strategic planning, and team dynamics from seasoned professionals. Enroll today to become a confident leader and drive success in any organization!</p>
-                      <a href="#" class="btn btn-primary">LEARN MORE</a>
+                      <a href="managment.php" class="btn btn-primary">LEARN MORE</a>
                     </div>
                   </div>    
             </div>
@@ -141,19 +139,19 @@
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img class="carousel-image d-block w-100" src="image/news1.jpg" alt="">
+                <img class="carousel-image d-block w-100 img-fluid" src="image/news1.jpg" alt="">
               </div>
               <div class="carousel-item">
-                <img class="carousel-image d-block w-100" src="image/news2.jpg" alt="">
+                <img class="carousel-image d-block w-100 img-fluid" src="image/news2.jpg" alt="">
               </div>
               <div class="carousel-item">
-                <img class="carousel-image d-block w-100" src="image/news3.jpg" alt="">
+                <img class="carousel-image d-block w-100 img-fluid" src="image/news3.jpg" alt="">
               </div>
               <div class="carousel-item">
-                <img class="carousel-image d-block w-100" src="image/news4.jpg" alt="">
+                <img class="carousel-image d-block w-100 img-fluid" src="image/news4.jpg" alt="">
               </div>
               <div class="carousel-item">
-                <img class="carousel-image d-block w-100" src="image/news5.jpg" alt="">
+                <img class="carousel-image d-block w-100 img-fluid" src="image/news5.jpg" alt="">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

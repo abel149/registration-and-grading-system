@@ -22,11 +22,61 @@ session_start();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!--Css-->
-    <link rel="stylesheet" href="department.css">
+    <link rel="stylesheet" href="">
 
     <link rel="icon" href="image/stmary.png">
 
 </head>
+<style>
+  header {
+    font-family: montserrat;
+    background-color: #4CAF50;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+.login-container {
+     border-radius: 8px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     padding: 40px;
+     max-width: 400px;
+     width: 100%;
+     margin-top: 80px;
+     margin-bottom: 20px;
+ }
+ .depheader{
+    margin-top: 100px;
+    
+ }
+ .card{
+    font-family: ubuntu;
+    padding: 10px;
+}
+.card:hover{
+    transform: scale(1.005);
+}
+.card-header,.card-body{
+    text-align: center;
+}
+.logout-button{
+  text-align:center;
+  padding:1rem 0 2rem 0;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+   
+}
+.deplist{
+    padding: 50px;
+}
+
+</style>
 
 <body>
 <section id="heading">
@@ -148,6 +198,9 @@ session_start();
 
       </div>
       </div>
+      <div class="logout-button">
+                <a href="includes/logout.php" class="btn btn-success log">Logout</a>
+            </div>
 
 </section>
      

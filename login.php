@@ -22,11 +22,56 @@ session_start();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!--Css-->
-    <link rel="stylesheet" href="loginstyle.css">
+    <link rel="stylesheet" href="">
 
     <link rel="icon" href="image/stmary.png">
 
 </head>
+<style>
+    body {
+    background-color: #cacaca;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+   background: #4eb151;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 400px;
+    width: 100%;
+    color: white;
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.btn-custom {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-custom:hover {
+    background-color: #0056b3;
+}
+
+.form-label {
+    font-weight: bold;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+   
+}
+</style>
 
 <body>
     <div class="login-container">
@@ -63,6 +108,8 @@ session_start();
             </div>
         </form>
     </div>
+    
+    
 
 
 
